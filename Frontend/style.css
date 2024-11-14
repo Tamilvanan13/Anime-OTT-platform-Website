@@ -1,0 +1,197 @@
+body
+{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.navbar
+{
+    background-color: rgb(5, 9, 35);
+    margin-top: 2px;
+    margin-left: 40;
+} 
+#carolbut
+{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(255, 196, 0);
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#carolbut:hover
+{
+    cursor: pointer;
+    background-color: rgb(73, 211, 73);
+    color: rgb(0, 0, 0);
+    font-size: large;
+}
+.design
+{
+    height: 35px;
+    width: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:red;
+    margin-top: 20px;
+    margin-left: 40px;
+    text-shadow: 7px 2px 7px rgba(0,0,0,0.43);text-shadow: 7px 2px 7px rgba(0,0,0,0.43);
+}
+#Action
+{
+    margin-left: 20px; 
+    font-size: 28px;
+}
+#Drama
+{
+  margin-left: 20px; 
+  font-size: 28px;
+}
+#Thriller
+{
+  margin-left: 20px; 
+  font-size: 28px;
+}
+#Comedy
+{
+  margin-left: 20px; 
+  font-size: 28px;
+}
+#Sports
+{
+  margin-left: 20px; 
+  font-size: 28px;
+}
+#Fantasy
+{
+  margin-left: 20px; 
+  font-size: 28px;
+}
+#SciFi
+{
+  margin-left: 20px; 
+  font-size: 28px;
+}
+#Music
+{
+  margin-left: 20px; 
+  font-size: 28px;
+}
+.col-md-12
+{
+    margin-top: 30px;
+    margin-left: 20px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+h4
+{
+    color: #f00;
+    padding-top: 10px;
+    margin-left: 30px;
+}
+p
+{
+    padding-top: 5px;
+    margin-left: 30px;
+}
+
+#img1
+{
+display: flexbox;
+border-radius: 5%;
+position: sticky;
+margin: 5% 1.56%; 
+ margin-left: 20px;
+margin-top: 10px;
+filter: drop-shadow(5px 5px 8px rgba(77, 76, 76, 0.788));
+transition: transform .4s;
+}
+#img1:hover
+{
+  transform: scale(1.1);
+} 
+#img2
+{
+    opacity: 70%;
+    margin-top: 25px;
+    border-radius: 10%;
+    margin-left: 30px; 
+    height: 550px;
+}
+#car
+{
+    display: flexbox;
+    position: sticky;
+    /* margin: 5% 1.56%;  */
+    filter: drop-shadow(5px 5px 8px rgba(77, 76, 76, 0.788));
+    transition: transform .4s;
+}
+#car:hover
+{
+    transform: scale(1.1);
+}
+
+.fav-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .fav-button i {
+    font-size: 20px;
+    color: #616060;
+  }
+  
+  .fav-button.active i {
+    color: #f00 !important;
+  }
+  
+  .fav-button i.fa-beat {
+    animation: pulse 0.5s infinite;
+  }
+  
+  @keyframes pulse 
+  {
+    0% 
+    {
+      transform: scale(1);
+    }
+    50% 
+    {
+      transform: scale(1.1);
+    }
+    100% 
+    {
+      transform: scale(1);
+    }
+  }
+  
+  .foot
+  {
+    width: 100%;
+    height: 190px;
+    background-color: #dcd9d9;
+    margin-top: 150px;
+    /* box-shadow: 1 10 20 8 black; */
+  }
+  #icon1
+  {
+    color: red;
+   margin-left: 650px;
+  }
+  #icon2
+  {
+    padding-left: 30px;
+  }
+  #privacypolicy
+  {
+    text-decoration: none;
+    text-align: center;
+    padding-top: 100px;
+    color: #f00;
+    margin-left: 250px;
+    font-size: 30px;
+  }

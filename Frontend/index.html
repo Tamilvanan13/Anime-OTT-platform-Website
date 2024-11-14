@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeWorld</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ind.js">
+    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome for heart icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    .fa-heart {
+      color: #888;
+      cursor: pointer;
+    }
+
+    .fa-heart.favorited {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid" style="width: 90%;">
+          <div class="titline"> </div>
+          <a class="navbar-brand"  href="#">Anime World</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html" style="background-color:red; border-radius: 5px;">Home</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#Action">Action</a></li>
+                  <li><a class="dropdown-item" href="#Drama">Drama</a></li>
+                  <li><a class="dropdown-item" href="#Thriller">Thriller</a></li>
+                  <li><a class="dropdown-item" href="#Comedy">Comedy</a></li>
+                  <li><a class="dropdown-item" href="#Sports">Sports</a></li>
+                  <li><a class="dropdown-item" href="#Fantasy">Fantasy</a></li>
+                  <li><a class="dropdown-item" href="#SciFi">Sci-Fi</a></li>
+                  <li><a class="dropdown-item" href="#Music">Music</a></li>
+                  <li><a class="dropdown-item" href="signup.html">Sign up</a></li>
+                  <li><a class="dropdown-item" href="login.html">Login</a></li>
+                </ul>
+              </li>
+              <a class="nav-link active" aria-current="page" href="favorites.html">Favorites</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="contact.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" id=" premium" style="background-color: goldenrod; color: rgb(255, 255, 255);" href="subscribe.html"><i>Premium</i></a></li>
+                  <li><a class="dropdown-item" href="contact.html">Contact us</a></li>
+                  <li><a class="dropdown-item" href="privacypolicy.html">privacy & Policy</a></li>
+                </ul>
+              </li> 
+              <a class="nav-link active" aria-current="page" href="store.html">Manga Online</a>
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger" type="submit">Search</button>
+            </form>  
+          </div>
+        </div>
+      </nav>
+
+ 
+
+      <!-- carousel -->
+    
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" >
+          <div class="carousel-item active", >
+            <img id="car" src="images/demon-slayer-3840x2160-17610.jpg"  class="d-block w-100" alt="..." style="height: 600px;margin-top: 20px;">
+            <div class="carousel-caption d-none d-md-block">
+              <button id="carolbut" type="button">Start Watch</button>
+              <!-- <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img id="car" src="images/jujutsu-kaisen-3840x2160-13900.jpg" class="d-block w-100" alt="..." style="height: 600px; margin-top: 20px;">
+            <div class="carousel-caption d-none d-md-block">
+              <button id="carolbut"  type="button">Start Watch</button>
+              <!-- <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img id="car" src="images/one-piece-character-3840x2160-15328.jpeg" class="d-block w-100" alt="..." style="height: 600px; margin-top: 20px;">
+            <div class="carousel-caption d-none d-md-block"> 
+              <button type="button" id="carolbut" class="btn btn-warning">Start Watch</button>
+              <!-- <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p> -->
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <!-- ANIMES -->
+      <div class="design"><span id="Action">Action</span></div>
+      <div class="col-md-12" style="width: 100%;">
+      <div class="row">
+        <div class="col-md-3">
+            <img id="img1" src="https://cdn.myanimelist.net/images/anime/10/78745.webp" alt="">
+            <h4>My Hero Academia</h4>
+            <p>Sub | Dub  
+              <button class="fav-button" onclick="favButton">
+                <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+              </button>
+            </p>
+          </div>  
+          <div class="col-md-3">
+            <img id="img1" src="https://cdn.myanimelist.net/images/anime/1208/94745.jpg" alt="">
+            <h4>Fullmetal Alchemist</h4>
+            <p>Sub | Dub
+            <button class="fav-button">
+              <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+            </button></p>
+          </div>  
+          <div class="col-md-3">
+            <img id="img1" src="https://cdn.myanimelist.net/images/anime/12/76049.jpg" alt="">
+            <h4>One Punch Man</h4>
+            <p>Sub | Dub
+            <button class="fav-button">
+              <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+            </button></p>
+          </div>  
+        <div class="col-md-3">
+            <img id="img1" src="https://cdn.myanimelist.net/images/anime/11/39717.jpg" alt="">
+            <h4>Word Art of Online</h4>
+            <p>Sub | Dub
+            <button class="fav-button">
+              <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+            </button></p>
+          </div>
+    </div>
+  </div>
+
+  <!-- Drama -->
+  <div class="design"><span id="Drama">Drama</span></div>
+  <div class="col-md-12">
+  <div class="row">
+    <div class="col-md-3">
+        <img id="img1" src="https://cdn.myanimelist.net/images/anime/1122/96435.jpg" alt="">
+        <h4>A Silent Voice</h4>
+        <p>Sub | Dub 
+        <button class="fav-button">
+          <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+        </button></p>
+      </div>  
+    <div class="col-md-3">
+        <img id="img1" src="https://cdn.myanimelist.net/images/anime/1032/135088.jpg" alt="">
+        <h4>Code Geass: Lelouch of the Rebellion</h4>
+        <p>Sub | Dub
+        <button class="fav-button">
+          <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+        </button></p>
+      </div>
+    <div class="col-md-3">
+      <img id="img1" src="https://cdn.myanimelist.net/images/anime/13/22128.jpg" alt="" style="height: 315px; width: 220px;">
+      <h4>Toradora!</h4>
+        <p>Sub | Dub
+        <button class="fav-button">
+          <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+        </button></p>
+    </div>
+    <div class="col-md-3">
+    <img id="img1" src="https://cdn.myanimelist.net/images/anime/1795/95088.jpg" alt="">
+    <h4>Violet Evergarden</h4>
+        <p>Sub | Dub
+        <button class="fav-button">
+          <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+        </button></p>
+</div>
+</div>
+</div>
+
+<!-- Thriller -->
+<div class="design"><span id="Thriller">Thriller</span></div>
+<div class="col-md-12">
+<div class="row">
+  <div class="col-md-3">
+      <img id="img1" src="https://cdn.myanimelist.net/images/anime/1648/93626.jpg" alt="">
+      <h4>Millennium Actress</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>  
+  <div class="col-md-3">
+      <img id="img1" src="https://cdn.myanimelist.net/images/anime/11/34131.jpg" alt="">
+      <h4>Ichi The Killer: Episode 0</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>
+  <div class="col-md-3">
+    <img id="img1" src="https://cdn.myanimelist.net/images/anime/1079/138100.jpg" alt="">
+    <h4>Death Note</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+  </div>
+  <div class="col-md-3">
+  <img id="img1" src="https://cdn.myanimelist.net/images/anime/1498/134443.jpg" alt="">
+  <h4>Tokyo Ghoul</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+</div>
+</div>
+</div>
+
+
+<!-- Comedy -->
+<div class="design"><span id="Comedy">Comedy</span></div>
+<div class="col-md-12">
+<div class="row">
+  <div class="col-md-3">
+      <img id="img1" src="https://cdn.myanimelist.net/images/anime/5/75639.jpg" alt="">
+      <h4>Assassination Classroom</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>  
+  <div class="col-md-3">
+      <img id="img1" src="https://cdn.myanimelist.net/images/anime/1441/122795.jpg" alt="">
+      <h4>Spy x Family</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>
+  <div class="col-md-3">
+    <img id="img1" src="https://cdn.myanimelist.net/images/anime/1271/109841.jpg" alt="">
+    <h4>That Time I Got Reincarnated as a Slime Season 2</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+  </div>
+  <div class="col-md-3">
+  <img id="img1" src="https://cdn.myanimelist.net/images/anime/1887/92364.jpg" alt="">
+  <h4>Dragon Ball</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+</div>
+</div>
+</div>
+
+<!-- Sports -->
+<div class="design"><span id="Sports">Sports</span></div>
+<div class="col-md-12">
+<div class="row">
+  <div class="col-md-3">
+      <img id="img1" src="https://th.bing.com/th/id/OIP.IzD_xgiOvpV3POvZ-zCcBAAAAA?w=322&h=478&rs=1&pid=ImgDetMain" alt="" style="width: 220px; height: 315px;">
+      <h4>Hajime No Ippo</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>  
+  <div class="col-md-3">
+      <img id="img1" src="https://wallpapercave.com/wp/wp7756827.jpg" alt="" style="width: 220px; height: 315px;">
+      <h4>Haikyuu</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>
+  <div class="col-md-3">
+    <img id="img1" src="https://th.bing.com/th/id/OIP.6aBRbd5noJXL3FBm6yXb8wHaKZ?rs=1&pid=ImgDetMain" alt="" style="height: 315px; width: 220px;">
+    <h4>Giant Killing</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+  </div>
+  <div class="col-md-3">
+  <img id="img1" src="https://img1.ak.crunchyroll.com/i/spire1/be611b65eb36149005789b740efc7a361333664528_full.jpg" alt="" style="width: 220px; height: 315px;">
+  <h4>Kuroko's Basketball</h4>
+      <p>Sub | Dub 
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+</div>
+</div>
+</div>
+
+
+<!-- Fantasy -->
+<div class="design"><span id="Fantasy">Fantasy</span></div>
+<div class="col-md-12">
+<div class="row">
+  <div class="col-md-3">
+      <img id="img1" src="https://upload.wikimedia.org/wikipedia/en/7/72/Bleachanime.png" alt="" style="width: 220px; height: 315px;">
+      <h4>Bleach</h4>
+      <p>Sub | N/A
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>  
+  <div class="col-md-3">
+      <img id="img1" src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974709939/chainsaw-man-vol-1-9781974709939_hr.jpg" alt="" style="width: 220px; height: 315px;">
+      <h4>Chainsaw Man</h4>
+      <p>Sub | N/A
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>
+  <div class="col-md-3">
+    <img id="img1" src="data:image/jpeg;base64,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" alt="" style="height: 315px; width: 220px;">
+    <h4>Castlevania</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+  </div>
+  <div class="col-md-3">
+  <img id="img1" src="https://m.media-amazon.com/images/M/MV5BOTg5ZjI5ZTAtOWE2OS00MjY4LWI4ZDQtMzEzMDY4MTgzYWJlXkEyXkFqcGdeQXVyNjc3OTE4Nzk@._V1_.jpg" alt="" style="width: 220px; height: 315px;">
+  <h4>Fate/Stay Night: Unlimited Blade Works</h4>
+      <p>Sub | Dub 
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+</div>
+</div>
+</div>
+
+<!--Sci-Fi-->
+<div class="design"><span id="SciFi">Sci_Fi</span></div>
+<div class="col-md-12">
+<div class="row">
+  <div class="col-md-3">
+      <img id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcPZJPcIgTsgyvzS3upIgjyM3sNupWX_P7dA&s" alt="" style="width: 220px; height: 315px;">
+      <h4>Terminator Zero</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>  
+  <div class="col-md-3">
+      <img id="img1" src="https://rukminim2.flixcart.com/image/850/1000/l5jxt3k0/book/b/o/i/darling-in-the-franxx-vol-1-2-original-imagg7qpf2hzwzty.jpeg?q=90&crop=false" alt="" style="width: 220px; height: 315px;">
+      <h4>Darling in the Franxx</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>
+  <div class="col-md-3">
+    <img id="img1" src="https://m.media-amazon.com/images/M/MV5BMDhmNjUxM2UtZTY2Zi00OTQ0LWExNjgtNDhkNTUyMjQ3MmU5XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg" alt="" style="height: 315px; width: 220px;">
+    <h4>Gintama</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+  </div>
+  <div class="col-md-3">
+  <img id="img1" src="https://m.media-amazon.com/images/M/MV5BYTA0MTA3M2MtYTdiMy00ZGY0LTgwZjktMTE0NmVjZjk4OTE3XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg" alt="" style="width: 220px; height: 315px;">
+  <h4>Psycho-Pass</h4>
+      <p>Sub | Dub 
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+</div>
+</div>
+</div>
+
+
+<!--Music-->
+<div class="design"><span id="Music">Music</span></div>
+<div class="col-md-12">
+<div class="row">
+  <div class="col-md-3">
+      <img id="img1" src="https://m.media-amazon.com/images/M/MV5BNDVhMjFiY2UtMzAwMC00MTYyLWI3NTAtZWVkYjVlNzgzYjUxXkEyXkFqcGdeQXVyNTc3MDU1MTU@._V1_FMjpg_UX1000_.jpg" alt="" style="width: 220px; height: 315px;">
+      <h4>Sound! Euphonium</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>  
+  <div class="col-md-3">
+      <img id="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPDV1ZumqYgjs2C5EwtVmBRimU3yM-8z7heg&s" alt="" style="width: 220px; height: 315px;">
+      <h4>Bocchi The Rock!</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+    </div>
+  <div class="col-md-3">
+    <img id="img1" src="https://upload.wikimedia.org/wikipedia/en/d/de/Your_Lie_in_April_Manga_cover.png" alt="" style="height: 315px; width: 220px;">
+    <h4>Your Lie in April</h4>
+      <p>Sub | Dub
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+  </div>
+  <div class="col-md-3">
+  <img id="img1" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Lost_Song_%28TV_series%29.jpg/220px-Lost_Song_%28TV_series%29.jpg" alt="" style="width: 220px; height: 315px;">
+  <h4>Lost Song</h4>
+      <p>Sub | Dub 
+      <button class="fav-button">
+        <i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+      </button></p>
+</div>
+</div>
+</div>
+
+<div class="foot">
+  <h1 style="text-align: center; color: rgb(0, 0, 0);">Follow on social media</h1>
+  <a href="" id="icon1"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+  </svg></a>
+  <a href="" id="icon2"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+  </svg></a>
+  <a href="" id="icon2"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+  </svg></a>  <a id="privacypolicy" href="privacypolicy.html">Privacy policy</a>
+  <h3 style="text-align: center; padding-top: 10px; font-size: small;"> Copyright © 2024-2030 .  ANIMEWORLD.IN  .  All Rights Reserved</h3>
+</div>
+
+<!-- Bootstrap and JQuery scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript to handle favorites -->
+<script src="ind.js"></script>
+
+</body>
+</html>

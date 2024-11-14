@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="bootstrap.min.js"></script>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+<!-- Responsive Contact Page with Dark Mode and Form Validation (vanilla JS).
+
+*Designed & built for desktop and tablets with viewport width >= 720px and in landscape orientation.  -->
+
+<div class="contact-container">
+  <div class="left-col">
+    <img class="logo" src="https://animechicago.com/wp-content/uploads/animeworld-wizard-world-merge.jpg"/>
+  </div>
+  <div class="right-col">
+    <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+  </label>
+  <div class="description">Dark Mode</div>
+</div>
+    <div class="anch">
+      <a href="index.html" style="text-decoration: none; font-size: 20px;"><b>>>> Home  </b></a>
+    </div>
+    <h1>Contact us</h1>
+    <p>We would love to hear from you..
+
+      For Enquiries and Suggestions, you can mail us at animeworld@animeweb.in or fill the following form and we will get in touch.</p>
+    
+    <form id="contact-form" method="post">
+      <label for="name">Full name</label>
+  <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+      <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+      <label for="message">Message</label>
+  <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
+<button type="submit" id="submit" name="submit">Send</button> <a href=""><img src="" alt=""></a>
+  
+</form>
+<div id="error"></div>
+<div id="success-msg"></div>
+  </div>
+</div>
+
+</body>
+<script>
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+</html>

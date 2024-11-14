@@ -1,0 +1,56 @@
+body
+{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.navbar
+{
+    background-color: rgb(5, 9, 35);
+    margin-top: 2px;
+    margin-left: 40;
+} 
+h1
+{
+    text-align: center;
+    margin-top: 10px;
+}
+p
+{
+    margin-left: 60px;
+    text-align:justify;
+    margin-right: 50px;
+}
+h3
+{
+    margin-left: 50px;
+}
+h2
+{
+    margin-left: 30px;
+}
+.foot
+{
+  width: 100%;
+  height: 190px;
+  background-color: #dcd9d9;
+  margin-top: 150px;
+  /* box-shadow: 1 10 20 8 black; */
+}
+#icon1
+{
+  color: red;
+ margin-left: 650px;
+}
+#icon2
+{
+  padding-left: 30px;
+}
+#privacypolicy
+{
+  text-decoration: none;
+  text-align: center;
+  padding-top: 100px;
+  color: #f00;
+  margin-left: 250px;
+  font-size: 30px;
+}
